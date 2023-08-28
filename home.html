@@ -1,0 +1,2903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="thome.css">
+    <link rel="stylesheet" href="mhome.css">
+    <!-- this is the google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- this is the favicon -->
+    <link rel="icon" href="/image/favicon-removebg-preview.png">
+    <!-- this is the font awesome lin -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- this is the jquery link -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <section class="account">
+            <form action="" class="acct-login">
+                <input type="email" id="email" placeholder="Email or ID">
+                <br>
+                <br>
+                <input type="password" id="pass" placeholder="password">
+                <br>
+                <br>
+                <button type="submit" id="loginbtn">login</button>
+            </form>
+        </section>
+        <!-- this is the cart card section -->
+        <section class="cart-card">
+            <div class="container">
+                <div>
+                    <i class="fa-sharp fa-solid fa-xmark cancel-cart"></i>
+                </div>
+                <!-- these are the cart items -->
+                <ul class="cart-items">
+                    <li><i class="fa-sharp fa-solid fa-xmark" class="cancel"></i><img src="/image/product.png" alt="product" class="cart-img"><span id="product-name">ankara</span><span id="qty">1</span><span id="product-price1">&#8358;2000<sup>00</sup></span></li>
+                    <li><i class="fa-sharp fa-solid fa-xmark" class="cancel"></i><img src="/image/product.png" alt="product" class="cart-img"><span id="product-name">kampala</span><span id="qty">1</span><span id="product-price2">&#8358;3000<sup>00</sup></span></li>
+                </ul>
+                <!-- this is the promotion code and cart totals section -->
+                <div class="promotioncode-carttotals">
+                    <!-- this is the promotion code section -->
+                    <div class="promotion-code">
+                        <p>promotion code</p>
+                        <!-- this is the coupon code form -->
+                        <form action="" class="coupon">
+                            <!-- this is the coupon code input -->
+                            <input type="text" id="coupon-code" placeholder="coupon code">
+                            <br>
+                            <br>
+                            <!-- this is the coupon button -->
+                            <button id="couponbtn">apply coupon</button>
+                        </form>
+                    </div>
+                    <div class="cart-totals">
+                        <p>cart totals</p>
+                        <p id="c-sub">subtotal<span>&#8358;5000<sup>00</sup></span></p>
+                        <p id="total">total<span>&#8358;5000<sup>00</sup></span></p>
+                        <a href="#" id="checkoutbtn">proceed to checkout</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- this the header of the home page... it include the logo, search bar, account, favourite and cart -->
+        <header class="top-head">
+            <div class="top-icons-mobile">
+                <a href="#" id="user"><i class="fa-solid fa-user" id="usericon"></i></a>
+                <a href="#" id="favourite"><i class="fa-sharp fa-solid fa-heart"><span id="fav-count">1</span></i></a>
+                <a href="#" id="cart"><i class="fa-solid fa-cart-shopping" id="carticon"></i><span id="cart-count">1</span></a>
+            </div>
+            <div class="container">
+                <!-- this is the logo -->
+                <div class="logo">
+                    <a href="/html/home.html"><img src="/image/logo.jpg" alt="logo"></a>
+                </div>
+                <!-- this is the search bar -->
+                <div class="search-bar">
+                    <form action="" class="search">
+                        <input type="search" placeholder="search products">
+                        <button type="submit" id="search-btn">search</button>
+                    </form>
+                </div>
+                <!-- this is the account, favourite, and cart icons -->
+                <div class="top-icons">
+                    <a href="#" id="user"><i class="fa-solid fa-user" id="usericon"></i></a>
+                    <a href="#" id="favourite"><i class="fa-sharp fa-solid fa-heart"><span id="fav-count">1</span></i></a>
+                    <a href="#" id="cart"><i class="fa-solid fa-cart-shopping" id="carticon"></i><span id="cart-count">1</span></a>
+                </div>
+                <!-- the hamburger menu for mobile -->
+                <div class="pages">
+                    <!-- this is hamburger menu and search icon for mobile -->
+                    <div class="menu-search">
+                        <div class="search-icon">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                        <div class="hamburger-menu">
+                            <i id="hammenu" class="fa-solid fa-bars"></i>
+                        </div>
+                    </div>
+                    <nav class="page-links">
+                        <ul>
+                            <li><a href="#">home</a></li>
+                            <li><a href="#">shop</a></li>
+                            <li id="prod001"><a href="#">products</a><i class="fa fa-angle-down" aria-hidden="true" id="angle-down"></i>
+                                <div class="products-dropdown-mobile">
+                                    <!-- this is the products dropdown menu -->
+                                    <ul class="products-menu">
+                                        <li><a href="#">beaded jewearies</a></li>
+                                        <li><a href="#">watches</a></li>
+                                        <li><a href="#">shoes</a></li>
+                                        <li><a href="#">kampala dress</a></li>
+                                        <li><a href="#">caps</a></li>
+                                        <li><a href="#">ankara</a></li>
+                                        <li><a href="#">paintings</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li id="col001"><a href="#">collections</a><i class="fa fa-angle-down" aria-hidden="true" id="angle-down2"></i>
+                                <!-- this is the collections dropdown menu -->
+                                <div class="collections-dropdown-mobile">
+                                    <ul>
+                                        <li><a href="#"><div class="men">Men's</div></a></li>
+                                        <li><a href="#"><div class="women">women's</div></a></li>
+                                        <li><a href="#"><div class="accessories">accessories</div></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="#">blog</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- this is the sidebar and the body section -->
+        <section class="split-screen">
+            <div class="containers">
+                <!-- this is the sidebar -->
+                <div class="sidebar">
+                    <div class="container">
+                        <!-- this is the navbar -->
+                        <nav class="nav-bar">
+                            <ul>
+                                <li><a href="#">home</a></li>
+                                <li><a href="#">shop</a></li>
+                                <li id="prod001"><a href="#">products</a><i class="fa-solid fa-angle-right" id="angle-right"></i>
+                                    <div class="products-dropdown">
+                                        <!-- this is the products dropdown menu -->
+                                        <ul class="products-menu">
+                                            <li><a href="#">beaded jewearies</a></li>
+                                            <li><a href="#">watches</a></li>
+                                            <li><a href="#">shoes</a></li>
+                                            <li><a href="#">kampala dress</a></li>
+                                            <li><a href="#">caps</a></li>
+                                            <li><a href="#">ankara</a></li>
+                                            <li><a href="#">paintings</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li id="col001"><a href="#">collections</a><i class="fa-solid fa-angle-right" id="angle-right2"></i>
+                                    <!-- this is the collections dropdown menu -->
+                                    <div class="collections-dropdown">
+                                        <ul>
+                                            <li><a href="#"><div class="men">Men's</div></a></li>
+                                            <li><a href="#"><div class="women">women's</div></a></li>
+                                            <li><a href="#"><div class="accessories">accessories</div></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="#">blog</a></li>
+                            </ul>
+                        </nav>
+                        <!-- this is the social media and copyright section -->
+                        <section class="social-copy">
+                            <!-- this is the social media links -->
+                            <div class="social-icons">
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                            <!-- this is the copyrights section -->
+                            <div class="copy">
+                                <p>&copy; 2023 by bala art</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <!-- this is the body section -->
+                <div class="body-section">
+                    <div class="container">
+                        <!-- this is the hero section -->
+                        <section class="hero">
+                            <div class="banner-img1">
+                                <img src="/image/bg2.png" alt="banner image">
+                            </div>
+                            <div class="content">
+                                <p>mega summer sale</p>
+                                <h1>bio discount <span>up to 50%</span></h1>
+                                <button type="submit" id="shopbtn">start shopping</button>
+                            </div>
+                            <div class="banner-img2">
+                                <img src="/image/bg1.png" alt="banner image">
+                            </div>
+                        </section>
+                        <!-- this is the collections section -->
+                        <section class="collections">
+                            <div class="container">
+                                <!-- this is the summer travel collection -->
+                                <div class="summer">
+                                    <p>paintings collections</p>
+                                    <h1>summer travel collection</h1>
+                                    <a href="#" id="painting-btn">shop now</a>
+                                </div>
+                                <!-- this is the flash sale for women item -->
+                                <div class="craft">
+                                    <p>craft collections</p>
+                                    <h1>Mid Season Up To <span>40%</span> Off</h1>
+                                    <a href="#" id="craft-btn">shop now</a>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- this is the featured products section -->
+                        <section class="featured-items">
+                            <!-- this is the heading -->
+                            <h1>featured items</h1>
+                            <div class="col-bot"></div>
+                            <!-- these are the featured products -->
+                            <div class="f-products">
+                                <!-- each featured products -->
+                                <div class="prod">
+                                    <!-- this is the product image -->
+                                    <div class="img-prod">
+                                        <img src="/image/product.png" alt="featured product">
+                                    </div>
+                                    <!-- these are icons on product to show more info -->
+                                    <div class="prod-icons">
+                                        <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                        <a href="/html/product.html"><i class="fa-regular fa-eye"></i></a>
+                                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                        <a href="#"><i class="fa-solid fa-share"></i></a>
+                                    </div>
+                                    <!-- this is the product details -->
+                                    <div class="prod-details">
+                                        <!-- this is the product name -->
+                                        <p id="prod-name">female bag</p>
+                                        <p>&#8358;2000<sup>00</sup></p>
+                                    </div>
+                                </div>
+                                <div class="prod">
+                                    <!-- this is the product image -->
+                                    <div class="img-prod">
+                                        <img src="/image/product.png" alt="featured product">
+                                    </div>
+                                    <!-- these are icons on product to show more info -->
+                                    <div class="prod-icons">
+                                        <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                        <a href="/html/product.html"><i class="fa-regular fa-eye"></i></a>
+                                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                        <a href="#"><i class="fa-solid fa-share"></i></a>
+                                    </div>
+                                    <!-- this is the product details -->
+                                    <div class="prod-details">
+                                        <!-- this is the product name -->
+                                        <p id="prod-name">hausa cap</p>
+                                        <p>&#8358;3000<sup>00</sup></p>
+                                    </div>
+                                </div>
+                                <div class="prod">
+                                    <!-- this is the product image -->
+                                    <div class="img-prod">
+                                        <img src="/image/product.png" alt="featured product">
+                                    </div>
+                                    <!-- these are icons on product to show more info -->
+                                    <div class="prod-icons">
+                                        <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                        <a href="/html/product.html"><i class="fa-regular fa-eye"></i></a>
+                                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                        <a href="#"><i class="fa-solid fa-share"></i></a>
+                                    </div>
+                                    <!-- this is the product details -->
+                                    <div class="prod-details">
+                                        <!-- this is the product name -->
+                                        <p id="prod-name">female gown</p>
+                                        <p>&#8358;7000<sup>00</sup></p>
+                                    </div>
+                                </div>
+                                <div class="prod">
+                                    <!-- this is the product image -->
+                                    <div class="img-prod">
+                                        <img src="/image/product.png" alt="featured product">
+                                    </div>
+                                    <!-- these are icons on product to show more info -->
+                                    <div class="prod-icons">
+                                        <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                        <a href="/html/product.html"><i class="fa-regular fa-eye"></i></a>
+                                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                        <a href="#"><i class="fa-solid fa-share"></i></a>
+                                    </div>
+                                    <!-- this is the product details -->
+                                    <div class="prod-details">
+                                        <!-- this is the product name -->
+                                        <p id="prod-name">paintings</p>
+                                        <p>&#8358;15000<sup>00</sup></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- this is the section for the first banner -->
+        <section class="banner-1">
+            <div class="container">
+                <!-- this is the flash sale for men -->
+                <div class="man-item">
+                    <p>men's collections</p>
+                    <h1>men's items up to <span>30%</span></h1>
+                    <a href="#" id="men-item-btn">shop now</a>
+                </div>
+                <!-- this is the flash sale for women item -->
+                <div class="women-item">
+                    <p>women's collections</p>
+                    <h1>MID SEASON UP TO <span>40%</span></h1>
+                    <a href="#" id="women-item-btn">shop now</a>
+                </div>
+                <!-- this is the flash sale for beaded jewelries -->
+                <div class="beaded-jewelries">
+                    <p>beaded jewelries</p>
+                    <h1>MID SEASON UP TO <span>30%</span></h1>
+                    <a href="#" id="beads-btn">shop now</a>
+                </div>
+            </div>
+        </section>
+        <!-- this is the trending item section -->
+        <section class="trending-items">
+            <!-- this is the heading that contains the title of the section -->
+            <h1>trending item</h1>
+            <div class="col-bot"></div>
+            <!-- this is the tabs container -->
+            <div class="trend-tabs">
+                <ul>
+                    <li><a href="#">man</a></li>
+                    <li><a href="#">woman</a></li>
+                    <li><a href="#">crafts</a></li>
+                    <li><a href="#">paintings</a></li>
+                    <li><a href="#">bags</a></li>
+                    <li><a href="#">clothings</a></li>
+                </ul>
+            </div>
+            <!-- this is the container for trending products -->
+            <div class="trend-cont">
+                <div class="trend-men">
+                    <!-- this is product three -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">new arrival</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product four -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">new arrival</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product five -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">new arrival</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product six -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">new arrival</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product seven -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">new arrival</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product eight -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">new arrival</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product nine -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">new arrival</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product ten -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">new arrival</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- this is the trend women section -->
+                <div class="trend-women">
+                    <!-- this is product three -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">women</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product four -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">women</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product five -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">women</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product six -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">women</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product seven -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">women</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product eight -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">women</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product nine -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">women</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product ten -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">women</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- this is trend crafts section -->
+                <div class="trend-crafts">
+                    <!-- this is product three -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">craft</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product four -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">craft</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product five -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">craft</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product six -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">craft</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product seven -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">craft</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product eight -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">craft</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product nine -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">craft/p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product ten -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">craft</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- this is the trend paintings section -->
+                <div class="trend-paintings">
+                    <!-- this is product three -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">paintings</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product four -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">paintings</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product five -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">paintings</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product six -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">paintings</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product seven -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">paintings</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product eight -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">paintings</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product nine -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">paintings</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product ten -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">paintings</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- this is trend bags section -->
+                <div class="trend-bag">
+                    <!-- this is product three -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">bag</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product four -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">bag</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product five -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">bag</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product six -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">bag</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product seven -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">bag</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product eight -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">bag</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product nine -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">bag</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product ten -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">bag</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- this is the trend clothing section -->
+                <div class="trend-clothing">
+                    <!-- this is product three -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">ankara</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product four -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">kampala</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product five -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">aso oke</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product six -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">atiku cotton</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product seven -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">cotton</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product eight -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">clothing</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product nine -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">clothing</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                    <!-- this is product ten -->
+                    <div class="prod">
+                        <!-- this is the product image -->
+                        <div class="img-prod">
+                            <img src="/image/product.png" alt="featured product">
+                        </div>
+                        <!-- these are icons on product to show more info -->
+                        <div class="prod-icons">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-share"></i></a>
+                        </div>
+                        <!-- this is the product details -->
+                        <div class="prod-details">
+                            <!-- this is the product name -->
+                            <p id="prod-name">clothing</p>
+                            <p>&#8358;15000<sup>00</sup></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- this is the second banner -->
+        <section class="banner-2">
+            <div class="container">
+                <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores aspernatur excepturi esse. Et, tempore ut.</span>
+                <a href="#" id="ban-btn">shop now</a>
+            </div>
+        </section>
+        <!-- this section is for mini shop on the home page -->
+        <section class="mini-shop">
+            <div class="container">
+                <!-- this is the mini shop and it has a sidebar which
+                has checkboxes to choose categories of products -->
+                <div class="minishop-split">
+                    <!-- the left bar with options to choose from -->
+                    <div class="left-bar">
+                        <!-- this are the options -->
+                        <form action="" class="mini-cate">
+                            <!-- option title -->
+                            <h1>shop by:</h1>
+                            <input type="checkbox" id="new-arrivals">
+                            <label for="new arrivals" id="tic-shop">new arrivals</label>
+                            <br>
+                            <br>
+                            <input type="checkbox" id="on-sale">
+                            <label for="on sale" id="tic-shop">on sale</label>
+                            <br>
+                            <br>
+                            <input type="checkbox" id="men">
+                            <label for="men" id="tic-shop">men</label>
+                            <br>
+                            <br>
+                            <input type="checkbox" id="women">
+                            <label for="women" id="tic-shop">women</label>
+                            <br>
+                            <br>
+                            <input type="checkbox" id="accessories">
+                            <label for="accessories" id="tic-shop">accessories</label>
+                            <br>
+                            <br>
+                            <input type="checkbox" id="paintings">
+                            <label for="paintings" id="tic-shop">paintings</label>
+                            <br>
+                            <br>
+                            <input type="checkbox" id="clothing">
+                            <label for="clothing" id="tic-shop">clothing</label>
+                            <br>
+                            <br>
+                            <input type="checkbox" id="bags">
+                            <label for="bags" id="tic-shop">bags</label>
+                        </form>
+                    </div>
+                    <!-- the mini shop to display the products -->
+                    <div class="mini-shopproducts">
+                        <!-- this is the new arrivals products -->
+                        <div class="new-arrivals">
+                            <!-- this is product three -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">new arrival</p>
+                                    <p>&#8358;15000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product four -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">new arrival</p>
+                                    <p>&#8358;15000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product five -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">new arrival</p>
+                                    <p>&#8358;15000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product six -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">new arrival</p>
+                                    <p>&#8358;15000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product seven -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">new arrival</p>
+                                    <p>&#8358;15000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product eight -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">new arrival</p>
+                                    <p>&#8358;15000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product nine -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">new arrival</p>
+                                    <p>&#8358;15000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product ten -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">new arrival</p>
+                                    <p>&#8358;15000<sup>00</sup></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- this are the on sale products -->
+                        <div class="on-sale">
+                            <!-- this is product three -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">new arrival</p>
+                                    <p>&#8358;15000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product four -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">new arrival</p>
+                                    <p>&#8358;15000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product five -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">new arrival</p>
+                                    <p>&#8358;15000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product six -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">new arrival</p>
+                                    <p>&#8358;15000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product seven -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">new arrival</p>
+                                    <p>&#8358;15000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product eight -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">new arrival</p>
+                                    <p>&#8358;15000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product nine -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">new arrival</p>
+                                    <p>&#8358;15000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product ten -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">on sale</p>
+                                    <p>&#8358;15000<sup>00</sup></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menprod">
+                            <!-- this is product three -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">men</p>
+                                    <p>&#8358;1000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product four -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">men</p>
+                                    <p>&#8358;1000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this product five -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">men</p>
+                                    <p>&#8358;1000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product six -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">men</p>
+                                    <p>&#8358;1000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product seven -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">men</p>
+                                    <p>&#8358;1000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product eight -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">men</p>
+                                    <p>&#8358;1000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product nine -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">men</p>
+                                    <p>&#8358;1000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product ten -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">men</p>
+                                    <p>&#8358;1000<sup>00</sup></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- this is the women section -->
+                        <div class="womenprod">
+                            <!-- this is product three -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">women</p>
+                                    <p>&#8358;10000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product four -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">women</p>
+                                    <p>&#8358;10000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product five -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">women</p>
+                                    <p>&#8358;10000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product six -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">women</p>
+                                    <p>&#8358;10000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product seven -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">women</p>
+                                    <p>&#8358;10000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product eight -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">women</p>
+                                    <p>&#8358;10000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product nine -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">women</p>
+                                    <p>&#8358;10000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product ten -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">women</p>
+                                    <p>&#8358;10000<sup>00</sup></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- this is the accessories section -->
+                        <div class="accessoriesprod">
+                            <!-- this is product three -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">accessories</p>
+                                    <p>&#8358;2000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product four -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">accessories</p>
+                                    <p>&#8358;2000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product five -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">accessories</p>
+                                    <p>&#8358;2000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product six -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">accessories</p>
+                                    <p>&#8358;2000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product seven -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">accessories</p>
+                                    <p>&#8358;2000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product eight -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">accessories</p>
+                                    <p>&#8358;2000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product nine -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">accessories</p>
+                                    <p>&#8358;2000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product ten -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">accessories</p>
+                                    <p>&#8358;2000<sup>00</sup></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- this is the paintings section -->
+                        <div class="paintings">
+                            <!-- this is product three -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">paintings</p>
+                                    <p>&#8358;15000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product four -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">paintings</p>
+                                    <p>&#8358;15000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product five -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">paintings</p>
+                                    <p>&#8358;15000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product six -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">paintings</p>
+                                    <p>&#8358;15000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product seven -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">paintings</p>
+                                    <p>&#8358;15000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product eight -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">paintings</p>
+                                    <p>&#8358;15000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product nine -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">paintings</p>
+                                    <p>&#8358;15000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product ten -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">paintings</p>
+                                    <p>&#8358;15000<sup>00</sup></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- this is the clothing section -->
+                        <div class="clothing">
+                            <!-- this is product three -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">clothing</p>
+                                    <p>&#8358;5000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product four -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">clothing</p>
+                                    <p>&#8358;5000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product five -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">clothing</p>
+                                    <p>&#8358;5000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product six -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">clothing</p>
+                                    <p>&#8358;5000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product seven -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">clothing</p>
+                                    <p>&#8358;5000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product eight -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">clothing</p>
+                                    <p>&#8358;5000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product nine -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">clothing</p>
+                                    <p>&#8358;5000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product ten -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">clothing</p>
+                                    <p>&#8358;5000<sup>00</sup></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- this is the bag section -->
+                        <div class="bag">
+                            <!-- this is product three -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">bags</p>
+                                    <p>&#8358;2500<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product four -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">bags</p>
+                                    <p>&#8358;2500<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product five -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">bags</p>
+                                    <p>&#8358;3000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product six -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">bags</p>
+                                    <p>&#8358;3000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product seven -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">bags</p>
+                                    <p>&#8358;3000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product eight -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">bags</p>
+                                    <p>&#8358;3000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product nine -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">bags</p>
+                                    <p>&#8358;3000<sup>00</sup></p>
+                                </div>
+                            </div>
+                            <!-- this is product ten -->
+                            <div class="prod">
+                                <!-- this is the product image -->
+                                <div class="img-prod">
+                                    <img src="/image/product.png" alt="featured product">
+                                </div>
+                                <!-- these are icons on product to show more info -->
+                                <div class="prod-icons">
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-solid fa-share"></i></a>
+                                </div>
+                                <!-- this is the product details -->
+                                <div class="prod-details">
+                                    <!-- this is the product name -->
+                                    <p id="prod-name">bags</p>
+                                    <p>&#8358;3000<sup>00</sup></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- this section is for blogs and on sale products -->
+        <section class="blog">
+            <div class="container">
+                <!-- this is the blog section -->
+                <div class="blog-sec">
+                    <!-- blog heading -->
+                    <p>latest blog posts</p>
+                    <div class="col-bot"></div>
+                    <!-- these is the blogposts container -->
+                    <div class="blog-cont">
+                        <!-- this is the blog post one -->
+                        <div class="blog-posts">
+                            <a href="#">
+                                <!-- this is the post picture -->
+                                <div class="blog-pic">
+                                    <div class="img">
+
+                                    </div>
+                                </div>
+                                <!-- this is the post title -->
+                                <div class="post-title">
+                                    <h2>Lorem ipsum dolor sit.</h2>
+                                </div>
+                                <!-- this is the date and comment container -->
+                                <div class="post-date-comment">
+                                    <!-- this is the post date column -->
+                                    <div class="post-date">
+                                        <p>11/06/2023</p>
+                                    </div>
+                                    <!-- this is the post comment column -->
+                                    <div class="comment">
+                                        <i class="fa-solid fa-comment"><span>0</span></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- this is blog post two -->
+                        <div class="blog-posts">
+                            <a href="#">
+                                <div class="blog-pic">
+                                    <div class="img">
+
+                                    </div>
+                                </div>
+                                <div class="post-title">
+                                    <h2>Lorem ipsum dolor sit.</h2>
+                                </div>
+                                <div class="post-date-comment">
+                                    <div class="post-date">
+                                        <p>11/06/2023</p>
+                                    </div>
+                                    <div class="comment">
+                                        <i class="fa-solid fa-comment"><span>0</span></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- this is blog post three -->
+                        <div class="blog-posts">
+                            <a href="#">
+                                <div class="blog-pic">
+                                    <div class="img">
+
+                                    </div>
+                                </div>
+                                <div class="post-title">
+                                    <h2>Lorem ipsum dolor sit.</h2>
+                                </div>
+                                <div class="post-date-comment">
+                                    <div class="post-date">
+                                        <p>11/06/2023</p>
+                                    </div>
+                                    <div class="comment">
+                                        <i class="fa-solid fa-comment"><span>0</span></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="blog-posts">
+                            <a href="#">
+                                <div class="blog-pic">
+                                    <div class="img">
+
+                                    </div>
+                                </div>
+                                <div class="post-title">
+                                    <h2>Lorem ipsum dolor sit.</h2>
+                                </div>
+                                <div class="post-date-comment">
+                                    <div class="post-date">
+                                        <p>11/06/2023</p>
+                                    </div>
+                                    <div class="comment">
+                                        <i class="fa-solid fa-comment"><span>0</span></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- this is the trust and footer section  -->
+        <footer>
+            <div class="container">
+                <div class="trust">
+                    <div class="shop-confi">
+                        <div class="icon">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                        <div class="details">
+                            <h3>Shop with confidence</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                        </div>
+                    </div>
+                    <div class="track">
+                        <div class="icon">
+                            <i class="fa-solid fa-truck"></i>
+                        </div>
+                        <div class="details">
+                            <h3>Track your order</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                        </div>
+                    </div>
+                    <div class="que">
+                        <div class="icon">
+                            <i class="fa-solid fa-comment-question"></i>
+                        </div>
+                        <div class="details">
+                            <h3>Have some questions</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="msg">
+                    <p>free delivery on all order over &#8358;20000. free 30 days return</p>
+                </div>
+                <div class="footer-menu">
+                    <div class="foot">
+                        <div class="left-foot">
+                            <div class="shop-column">
+                                <h3>shop</h3>
+                                <ul>
+                                    <li><a href="#">free voucher</a></li>
+                                    <li><a href="#">get commission</a></li>
+                                    <li><a href="#">all products</a></li>
+                                </ul>
+                            </div>
+                            <div class="help-column">
+                                <h3>help</h3>
+                                <ul>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">Accessibility</a></li>
+                                </ul>
+                            </div>
+                            <div class="about-column">
+                                <h3>about</h3>
+                                <ul>
+                                    <li><a href="#">our story</a></li>
+                                    <li><a href="#">news</a></li>
+                                    <li><a href="#">return policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="right-foot">
+                            <p>sign up to get 10% off your first order</p>
+                            <form action="">
+                                <input type="email" placeholder="Your Email Address" id="sub">
+                                <button id="sub-btn">subscribe</button>
+                            </form>
+                            <div class="social-icons">
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foot-copy">
+                        <div class="copyright">
+                            <p>&copy;2023 bala art. all rights reserved</p>
+                        </div>
+                        <div class="legal">
+                            <ul>
+                                <li><a href="#">terms of service</a></li>
+                                <li><a href="#">privacy policy</a></li>
+                                <li><a href="#">do not sell my information</li>
+                            </ul>
+                        </div>
+                        <div class="payment-img">
+                            <img src="/image/payments.png" alt="payment method">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="/javascript/homej.js"></script>
+    <script src="/javascript/home.js"></script>
+</body>
+</html>
